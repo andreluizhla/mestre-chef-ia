@@ -9,17 +9,19 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
-import Button from "@mui/material/Button";
 import Check from "@mui/icons-material/Check";
 
 import "./index.css";
-import { mockIngredents } from "./mock";
+import { mockIngredents } from "../../mock";
+import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
+import CustomButton from "../../components/Button";
 
 const Student = () => {
     // selected ingredient names
     const [checked, setChecked] = useState([]);
     const [mockIngredients, setMockIngredents] = useState([]);
     const [expanded, setExpanded] = useState(false);
+    const [reptition, setReptition] = useState(false);
 
     // carregar lista e seleções salvas ao montar
     useEffect(() => {
@@ -91,7 +93,7 @@ const Student = () => {
                     >
                         <ListItemButton onClick={() => setExpanded(!expanded)}>
                             <ListItemText
-                                sx={{ color: 'white' }}
+                                sx={{ color: "white" }}
                                 primary={`Ingredientes (${checked.length} selecionados)`}
                             />
                             <span className="expand-icon" aria-hidden>
@@ -146,19 +148,17 @@ const Student = () => {
                     <TextareaAutosize className="obs-textarea" minRows={6} />
                 </div>
                 <div className="buttons">
-                    <Button
-                        sx={{
-                            backgroundColor: "var(--action)",
-                            color: "white",
-                            borderRadius: "var(--border-radius)",
-                            marginTop: "20px",
-                        }}
-                        startIcon={<Check />}
-                    >
-                        Confirmar
-                    </Button>
+                    <CustomButton 
+                        icon={reptition ? <CheckBox /> : <CheckBoxOutlineBlank />}
+                        text="Repetições"
+                        action={() => {setReptition(!reptition)}}
+                    />
+                    <CustomButton
+                        icon={<Check />}
+                        text="Confirmar"
+                    />
                 </div>
-            </div>
+                </div>
         </section>
     );
 };
