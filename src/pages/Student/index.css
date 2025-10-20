@@ -1,4 +1,4 @@
-img {
+.menu-image {
     max-width: 25vw;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);

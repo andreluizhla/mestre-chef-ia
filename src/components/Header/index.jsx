@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router";
 import { IconButton } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -7,9 +7,11 @@ import "./index.css";
 const Header = () => {
     return (
         <header>
-            <IconButton>
-                <MenuIcon />
-            </IconButton>
+            <Link to="/">
+                <IconButton>
+                    <MenuIcon />
+                </IconButton>
+            </Link>
             <IconButton>
                 <AccountCircleIcon />
             </IconButton>

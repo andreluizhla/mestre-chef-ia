@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'Itim';
-  src: url('fonts/Itim-Regular.ttf');
+  src: url('./assets/fonts/Itim-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: var(--font);
 }
 
 :root {
@@ -27,7 +28,6 @@ html, body {
 body {
   background-color: var(--bg-geral);
   color: var(--font-color);
-  font-family: var(--font);
 }
 
 .app {
