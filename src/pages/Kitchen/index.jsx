@@ -4,7 +4,7 @@ const Kitchen = () => {
     return (
         <>
             <div className="question-kitchen">
-                <img src="../src/assets/images/logoVermelho.png" alt="Logo do Chef IA" className='logo-kitchen' />
+                <img src="../../images/logoChefIA.png" alt="Logo do Chef IA" className='logo-kitchen' />
                 <h1>O que vamos preparar hoje?</h1>
             </div>
             <div className="input-container-kitchen">
