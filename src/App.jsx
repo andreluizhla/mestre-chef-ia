@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Student from "./pages/Student";
-import Kitchen from "./pages/Kitchen";
-import Representative from "./pages/Representative";
-import Header from "./components/Header";
+import Home from "./pages/Home/home";
+import Student from "./pages/Student/student";
+import Kitchen from "./pages/Kitchen/kitchen";
+import Representative from "./pages/Representative/representative";
+import Header from "./components/Header/header";
 import "./App.css";
 
 function App() {

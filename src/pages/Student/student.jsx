@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Checkbox from "@mui/material/Checkbox";
+
 import IconButton from "@mui/material/IconButton";
 import Check from "@mui/icons-material/Check";
 import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
@@ -15,6 +10,7 @@ import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
 import CustomButton from "../../components/Button";
 import { ingredients } from "../../mock";
 import "./student.css";
+import IngredientList from "../../components/List/list";
 
 const Student = () => {
     // selected ingredient names
@@ -81,73 +77,13 @@ const Student = () => {
 
             <div className="menu-infor">
                 <h1 className="menu-name">Arroz, Feijão, Farofa e Salada</h1>
-                <List
-                    sx={{ padding: 0, marginTop: "20px" }}
-                    className="compact-list"
-                >
-                    {/* item compacto que expande/colapsa (resumo) */}
-                    <ListItem
-                        disablePadding
-                        className={`compact-summary ${
-                            expanded ? "expanded" : ""
-                        }`}
-                    >
-                        <ListItemButton onClick={() => setExpanded(!expanded)}>
-                            <ListItemText
-                                sx={{ color: "white" }}
-                                primary={`Ingredientes (${checked.length} selecionados)`}
-                            />
-                            <span className="expand-icon" aria-hidden>
-                                {expanded ? "▾" : "▸"}
-                            </span>
-                        </ListItemButton>
-                    </ListItem>
-
-                    {/* lista completa visível somente quando expandido */}
-                    {expanded &&
-                        mockIngredients.map((value) => {
-                            const labelId = `checkbox-list-label-${value}`;
-
-                            return (
-                                <ListItem
-                                    key={value}
-                                    disablePadding
-                                    className="ingredient-item"
-                                >
-                                    <ListItemButton
-                                        role={undefined}
-                                        onClick={handleToggle(value)}
-                                        dense
-                                    >
-                                        <ListItemIcon>
-                                            <Checkbox
-                                                edge="start"
-                                                checked={checked.includes(
-                                                    value
-                                                )}
-                                                tabIndex={-1}
-                                                disableRipple
-                                                sx={{
-                                                    color: "var(--action)",
-                                                    "&.Mui-checked": {
-                                                        color: "var(--action)",
-                                                    },
-                                                }}
-                                            />
-                                        </ListItemIcon>
-                                        <ListItemText
-                                            id={labelId}
-                                            primary={value}
-                                        />
-                                    </ListItemButton>
-                                </ListItem>
-                            );
-                        })}
-                </List>
-                <div className="observation">
-                    <p className="obs-text-p">Observação</p>
-                    <TextareaAutosize className="obs-textarea" minRows={6} />
-                </div>
+                <IngredientList 
+                    ingredents={mockIngredients}
+                    checked={checked}
+                    handleToggle={handleToggle}
+                    setExpanded={setExpanded}
+                    isExpanded={expanded}
+                />
                 <div className="buttons">
                     <CustomButton 
                         icon={reptition ? <CheckBox /> : <CheckBoxOutlineBlank />}
