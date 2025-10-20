@@ -14,7 +14,7 @@ import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
 
 import CustomButton from "../../components/Button";
 import { ingredients } from "../../mock";
-import "./index.css";
+import "./student.css";
 
 const Student = () => {
     // selected ingredient names

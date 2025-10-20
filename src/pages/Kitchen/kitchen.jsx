@@ -1,5 +1,5 @@
 import { TextareaAutosize } from '@mui/material'
-import './index.css'
+import './kitchen.css'
 const Kitchen = () => {
     return (
         <>

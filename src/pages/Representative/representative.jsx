@@ -3,7 +3,7 @@ import { Check } from '@mui/icons-material'
 import CustomTable from '../../components/Table'
 import CustomButton from '../../components/Button'
 import { headers, studentsData } from '../../mock'
-import './index.css'
+import './representative.css'
 
 const Representative = () => {
     const [mockHeaders, setMockHeaders] = useState([])

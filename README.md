@@ -1,13 +1,17 @@
 # Meste Chef IA
 
+## Geral
+
+O Mestre Chef IA, mais conhecido como Chef IA
+
 ## Dev
 
 ### Github
 
 Ao fazer alguma alteração e fazer o commit, comece a mensagem com alguma das seguinte categorias:
-feat -> Se a alteração é alguma **Feature** nova
-refactor -> Se a ateração foi uma **Refatoração**
-fix -> Se a alteração foi uma **Correção**
+- feat -> Se a alteração é alguma **Feature** nova
+- refactor -> Se a ateração foi uma **Refatoração**
+- fix -> Se a alteração foi uma **Correção**
 
 Currently, two official plugins are available:
 
