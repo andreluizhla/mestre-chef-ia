@@ -10,29 +10,29 @@ import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import Check from "@mui/icons-material/Check";
-
-import "./index.css";
-import { mockIngredents } from "../../mock";
 import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
+
 import CustomButton from "../../components/Button";
+import { ingredients } from "../../mock";
+import "./index.css";
 
 const Student = () => {
     // selected ingredient names
     const [checked, setChecked] = useState([]);
-    const [mockIngredients, setMockIngredents] = useState([]);
+    const [mockIngredients, setMockIngredients] = useState([]);
     const [expanded, setExpanded] = useState(false);
     const [reptition, setReptition] = useState(false);
 
     // carregar lista e seleções salvas ao montar
     useEffect(() => {
-        setMockIngredents(mockIngredents);
+        setMockIngredients(ingredients);
         try {
             // const saved = localStorage.getItem('selectedIngredients');
             // if (saved) {
             //     setChecked(JSON.parse(saved));
             // } else {
             // por padrão, marcar todos os ingredientes quando não houver seleção salva
-            setChecked(mockIngredents);
+            setChecked(ingredients);
             // }
         } catch {
             // ignore parse errors
@@ -75,6 +75,7 @@ const Student = () => {
                 <img
                     src="https://img.freepik.com/fotos-gratis/composicao-de-comida-brasileira-deliciosa-de-alto-angulo_23-2148739223.jpg"
                     alt="prato de comida"
+                    className="menu-image"
                 />
             </div>
 
