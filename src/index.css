@@ -32,7 +32,6 @@ body {
 
 .app {
   background-color: var(--bg-app);
-  max-width: 70%;
   height: 70%;
   position: absolute;
   top: 0;
@@ -43,4 +42,24 @@ body {
   text-align: center;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+}
+
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 90%;
+    height: 80%;
+  }
+}
+
+@media (min-width: 500px) {
+  .app {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 200px) {
+  .app {
+    width: 100%;
+  }
 }
