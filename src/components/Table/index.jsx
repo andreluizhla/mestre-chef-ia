@@ -23,8 +23,8 @@ const CustomTable = ({ data }) => {
                     <TableRow>
                         <TableCell align="left" sx={style}>Nº</TableCell>
                         <TableCell align="left" sx={style}>Aluno</TableCell>
-                        <TableCell align="right" sx={style}>Vai comer?</TableCell>
-                        <TableCell align="right" sx={style}>Repetir</TableCell>
+                        <TableCell align="center" sx={style}>Vai comer?</TableCell>
+                        <TableCell align="center" sx={style}>Repetir</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -41,10 +41,10 @@ const CustomTable = ({ data }) => {
                                 {row.id}
                             </TableCell>
                             <TableCell align="left" sx={style}>{row.name}</TableCell>
-                            <TableCell align="right" sx={style}>
+                            <TableCell align="center" sx={style}>
                                 {row.willEat ? <CheckBox sx={{color:"var(--action)", fontSize:'2rem'}}/> : <CheckBoxOutlineBlank sx={{color:"var(--action)", fontSize:'2rem'}}/>}
                             </TableCell>
-                            <TableCell align="right" sx={style}>
+                            <TableCell align="center" sx={style}>
                                 {row.repeat ? <CheckBox sx={{color:"var(--action)", fontSize:'2rem'}}/> : <CheckBoxOutlineBlank sx={{color:"var(--action)", fontSize:'2rem'}}/>}
                             </TableCell>
                         </TableRow>

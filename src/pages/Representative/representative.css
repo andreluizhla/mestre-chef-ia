@@ -9,3 +9,7 @@ h1 {
     max-width: 90%;
     max-height: 300px;
 }
+
+.custom-button {
+    margin-bottom: 10px;
+}

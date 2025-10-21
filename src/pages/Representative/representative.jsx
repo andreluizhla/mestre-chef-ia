@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Check } from '@mui/icons-material'
 import CustomTable from '../../components/Table'
-import CustomButton from '../../components/Button'
+import CustomButton from '../../components/CustomButton'
 import { headers, studentsData } from '../../mock'
 import './representative.css'
 
@@ -21,6 +21,7 @@ const Representative = () => {
                 data={mockData}
             />
             <CustomButton 
+                sx={{marginTop: "10px"}}
                 icon={<Check />}
                 text="Confirmar"
                 onClick={() => {}}

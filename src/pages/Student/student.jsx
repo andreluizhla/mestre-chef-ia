@@ -7,10 +7,10 @@ import IconButton from "@mui/material/IconButton";
 import Check from "@mui/icons-material/Check";
 import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
 
-import CustomButton from "../../components/Button";
+import CustomButton from "../../components/CustomButton";
 import { ingredients } from "../../mock";
 import "./student.css";
-import IngredientList from "../../components/List/list";
+import IngredientList from "../../components/List";
 
 const Student = () => {
     // selected ingredient names
