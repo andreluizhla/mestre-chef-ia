@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/home";
-import Student from "./pages/Student/student";
-import Kitchen from "./pages/Kitchen/kitchen";
-import Representative from "./pages/Representative/representative";
+import Home from "./pages/HomePage/home";
+import Student from "./pages/StudentPage/student";
+import Kitchen from "./pages/KitchenPage/kitchen";
+import Representative from "./pages/RepresentativePage/representative";
 import Header from "./components/Header";
 import "./App.css";
+import Sended from "./pages/SendedPage/sended";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/aluno/" element={<Student />} />
                     <Route path="/representante/" element={<Representative />} />
                     <Route path="/cozinha/" element={<Kitchen />} />
+                    <Route path="/enviado/" element={<Sended />} />
                 </Routes>
             </div>
         </>
