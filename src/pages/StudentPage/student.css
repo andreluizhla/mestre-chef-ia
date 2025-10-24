@@ -18,16 +18,11 @@
 }
 
 .weekday {
-    width: fit-content;
-    border-radius: var(--border-radius);
-    display: flex;
-    margin: auto;
-    align-items: center;
-    gap: 12px;
     font-size: 24px;
+/*  
     font-weight: bold;
     box-shadow: var(--box-shadow);
-    margin-bottom: 12px;
+    margin-bottom: 12px; */
 }
 
 .meun-infor {

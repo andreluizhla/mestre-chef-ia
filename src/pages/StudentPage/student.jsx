@@ -61,14 +61,14 @@ const Student = () => {
     return (
         <section className="main">
             <div className="menu-main">
-                <div className="weekday">
-                    <IconButton>
+                <div className="weekday-countainer">
+                    {/* <IconButton>
                         <ArrowBackIosNewIcon sx={{ color: "#FF9D00" }} />
-                    </IconButton>
-                    <p>Segunda</p>
-                    <IconButton>
+                    </IconButton> */}
+                    <p className="weekday">Segunda</p>
+                    {/* <IconButton>
                         <ArrowForwardIosIcon sx={{ color: "#FF9D00" }} />
-                    </IconButton>
+                    </IconButton> */}
                 </div>
                 <img
                     src="https://img.freepik.com/fotos-gratis/composicao-de-comida-brasileira-deliciosa-de-alto-angulo_23-2148739223.jpg"
